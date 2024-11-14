@@ -1,0 +1,82 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: "Univers LT Std";
+    src: url('../fonts/UniversLTStd-Bold.otf') format('opentype');
+    src: url('../fonts/UniversLTStd.otf') format('opentype');
+  }
+
+  html {
+    font-family: "Univers LT Std", system-ui, sans-serif;
+    /* font-size: 10px; */
+    @apply text-default-black;
+  }
+
+  .laila {
+    font-family: var(--font-laila);
+  }
+
+  .h2,
+  h2 {
+    @apply text-4xl leading-10 font-bold mb-4;
+  }
+
+  .h4,
+  h4 {
+    @apply text-l font-bold leading-10 mb-4;
+  }
+
+  ul {
+    @apply ps-6 list-disc;
+  }
+
+  .body-text p {
+    @apply text-base mb-5 leading-8 break-words;
+  }
+
+  .body-text .text-align-center {
+    @apply text-center;
+  }
+
+  table {
+    @apply mb-4;
+  }
+
+  table td {
+    @apply border border-gray p-4;
+  }
+
+  .body-text table p {
+    @apply mb-0;
+  }
+
+  .btn-secondary {
+    @apply bg-red hover:bg-red-100 ease-in-out ;
+  }
+
+  h1,
+  .h1 {
+    @apply text-xxl lg:text-4xl font-semibold;
+  }
+
+  select {
+    @apply bg-white py-2 pe-4 ps-2 border border-shadow-dark-gray;
+  }
+}
+
+
+.icon-video {
+  background-color: #363e44;
+  background-image: url('/assets/images/video-icon.png');
+  width: 2rem;
+  height: 2rem;
+  display: block;
+  background-size: 2rem;
+  position: absolute;
+  inset-inline-start: 0.75rem;
+  top: 0.75rem;
+
+}
