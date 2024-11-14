@@ -19,9 +19,25 @@ export function middleware(request) {
   
   const localeValue = preferredLocales.length > 0 ? preferredLocales[0] : locales[0];
 
+  // Fetch the country code from Cloudflare headers
+  const countryCode = request.headers.get('CF-IPCountry') || 'US'; // Default to 'US' if not available
+
   // Call the intl middleware for redirect.
   const response = intlMiddleware(request);
-  response.cookies.set('NEXT_LOCALE', localeValue, { path: '/', httpOnly: true, maxAge: undefined });
+
+  // Set the locale cookie
+  response.cookies.set('NEXT_LOCALE', localeValue, {
+    path: '/',
+    httpOnly: true,
+    maxAge: undefined,
+  });
+
+  // Set the country code cookie
+  response.cookies.set('COUNTRY_CODE', countryCode, {
+    path: '/',
+    httpOnly: true,
+    maxAge: undefined,
+  });
   
   // Return the response
   return response;
