@@ -9,7 +9,7 @@ const nextConfig = {
     remotePatterns: [
       {
         // protocol: 'https',
-        hostname: process.env.NEXT_IMAGE_DOMAIN,
+        hostname: '7257-2409-40f2-3040-74c9-df9c-aa9e-9bc6-c77.ngrok-free.app',
         // port: '',
         // pathname: '/sites/default/files/**',
       },
