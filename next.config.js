@@ -9,7 +9,7 @@ const nextConfig = {
     remotePatterns: [
       {
         // protocol: 'https',
-        hostname: '7257-2409-40f2-3040-74c9-df9c-aa9e-9bc6-c77.ngrok-free.app',
+        hostname: 'baef-2409-40f2-305a-6fb2-ce3f-5ba4-50bf-e989.ngrok-free.app',
         // port: '',
         // pathname: '/sites/default/files/**',
       },
